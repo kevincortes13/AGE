@@ -1,0 +1,82 @@
+{% extends 'elite/base.html' %}
+
+{% block extra_head_tags %}
+
+  <title>Marketing | GrupoElite Sport</title>
+
+  <meta itemprop="name" content="Marketing | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Marketing | GrupoElite Sport">
+
+  <meta property="og:title" content="Marketing | GrupoElite Sport" />
+
+  <meta property="og:title" content="Marketing | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+
+{% load staticfiles %}
+{% block content %}
+
+<div class="container padding-cero">
+  <div class="container-fluid fondo">
+    <div class="container">
+      <h1 class="colaboradores animacion2"><strong>MARKETING</strong></h1>
+
+   </div>
+  </div>
+</div>
+
+<div class="container fondo-blanco marketing">
+  
+  <br>
+
+  <div class="col-sm-3 borde-marketing padiding-cinco altura-marketing animacion2">
+    <br>
+    <img src="{% static 'img/marketing/imagen.png' %}" alt="Imagen" height="50" width="50">
+    <h2>Imagen</h2>
+    <p>Asesoramiento personal en lo que a la imagen se refiere, manejando  todo lo referente a la imagen publica del jugador, relaciones con las marcas y relaciones mediáticas.</p>
+  </div>
+  <div class="col-sm-3 borde-marketing padiding-cinco altura-marketing animacion2" >
+    <br>
+    <img src="{% static 'img/marketing/sponsors.png' %}" alt="Imagen" height="50" width="50">
+    <h2>Sponsors</h2>
+    <p>Relaciones con las marcas, para lograr acuerdos de patrocinio que pueda beneficiar al jugador.</p>
+  </div>
+  <div class="col-sm-3 borde-marketing  padiding-cinco altura-marketing animacion2">
+    <br>
+    <img src="{% static 'img/marketing/prensa.png' %}" alt="Imagen" height="50" width="50">
+    <h2>Gabinete de prensa
+Comunicación</h2>
+    <p>Relaciones con los medios.</p>
+  </div>
+  <div class="col-sm-3 borde-marketing padiding-cinco altura-marketing animacion2">
+    <br>
+    <img src="{% static 'img/marketing/diseñoweb.png' %}" alt="Imagen" height="50" width="50">
+    <h2>Diseño web</h2>
+    <p>Estudio, asesoría de necesidades reales y relación con las mejores empresas de diseño web.</p>
+  </div>
+  <br><br>
+  <div class="col-sm-4  borde-marketing padiding-arriba-abajo altura-marketing animacion2">
+    <br>
+    <img src="{% static 'img/marketing/audiovisual.png' %}" alt="Imagen" height="50" width="50">
+    <h2>Audiovisual / Foto y vídeo</h2>
+    <p>Utilizaremos nuestro departamento de creativos para lograr mediante fotos y vídeos, colaborar con las necesidades que en este tema se les presente al jugador.</p>
+  </div>
+  <div class="col-sm-4  borde-marketing padiding-arriba-abajo altura-marketing animacion2">
+    <br>
+    <img src="{% static 'img/marketing/marketingonline.png' %}" alt="Imagen" height="50" width="50">
+    <h2>Marketing online</h2>
+    <p>Crear estrategias digital personalizada según las características del jugador. Llevando a cabo un plan de social media que abarca activación, creación de contenido y monitoreo de redes sociales.</p>
+  </div>
+  <div class="col-sm-4 borde-marketing padiding-arriba-abajo altura-marketing animacion2">
+    <br>
+    <img src="{% static 'img/marketing/socialmedia.png' %}" alt="Imagen" height="50" width="50">
+    <h2>Social Media</h2>
+    <p>Estrategia, activación de redes sociales, creación de contenido, monitorización y consolidación de base de fans.</p>
+  </div>
+  <div class="col-sm-2"><br></div>
+
+</div>
+
+{% endblock %}

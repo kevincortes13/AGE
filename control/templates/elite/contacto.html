@@ -1,0 +1,117 @@
+{% extends 'elite/base.html' %}
+
+{% block extra_head_tags %}
+
+  <title>Contacto | GrupoElite Sport</title>
+
+  <meta itemprop="name" content="Contacto | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Contacto | GrupoElite Sport">
+
+  <meta property="og:title" content="Contacto | GrupoElite Sport" />
+
+  <meta property="og:title" content="Contacto | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+
+{% load staticfiles %}
+{% block content %}
+<div class="container padding-cero">
+  <div class="container-fluid fondo">
+    <div class="container">
+      <h1 class="colaboradores animacion1"><strong>CONTACTO</strong></h1>
+
+   </div>
+  </div>
+</div>
+<div class="container padding-cero sombra">
+<div class="container fondo-blanco fondo-gris">
+  <div class="contacto animacion1">
+    <section>
+      <article>
+        <header>
+          <h2><strong>GrupoElite Occidental</strong></h2>
+        </header>
+        <div class="contacto-box">
+          <div class="contacto-box-logo">
+            <img src="{% static 'img/delegaciones/1.png' %}" class="th-1 img-responsive imgcenter">
+          </div>
+          <div class="contacto-box-info">
+          Eddie Zapata<br>
+          T. 00584126424578<br>
+          <a class="correo">eddie.zb@hotmail.com</a><br>
+          <a class="correo">saenzsportagency18@gmail.com</a><br>
+        </div>
+        </div>     
+      </article>
+    </section>
+  </div>
+</div>
+<div class="container fondo-blanco">
+  <div class="contacto animacion1">
+    <section>
+      <article>
+        <header>
+          <h2><strong>GrupoElite Central</strong></h2>
+        </header>
+        <div class="contacto-box">
+          <div class="contacto-box-logo">
+            <img src="{% static 'img/delegaciones/2.png' %}" class="th-1 img-responsive imgcenter">
+          </div>
+          <div class="contacto-box-info">
+          Jean Arango <br>
+          Diego Gamez<br>
+          <a class="correo">saenzsportagency18@gmail.com</a><br>
+        </div>
+        </div>     
+      </article>
+    </section>
+  </div>
+</div>
+<div class="container fondo-blanco fondo-gris">
+  <div class="contacto animacion1">
+    <section>
+      <article>
+        <header>
+          <h2><strong>GrupoElite Oriental</strong></h2>
+        </header>
+        <div class="contacto-box">
+          <div class="contacto-box-logo">
+            <img src="{% static 'img/delegaciones/3.png' %}" class="th-1 img-responsive imgcenter">
+          </div>
+          <div class="contacto-box-info">
+          Ángel Gamez <br>
+          <a class="correo">saenzsportagency18@gmail.com</a><br>
+        </div>
+        </div>     
+      </article>
+    </section>
+  </div>
+</div>
+<div class="container fondo-blanco fondo-internacional">
+  <div class="contacto animacion1">
+    <section>
+      <article>
+        <header>
+          <h2><strong>GrupoElite Internacional</strong></h2>
+        </header>
+        <div class="contacto-box">
+          <div class="contacto-box-logo">
+            <img src="{% static 'img/delegaciones/4.png' %}" class="th-1 img-responsive imgcenter">
+          </div>
+          <div class="contacto-box-info">
+          Venezuela ⏩ Daniel Delfino <br>
+          T. 00584244007878<br>
+          México ⏩ Guillermo Llorenz <br>
+          Costa Rica ⏩ Longino Fernandez <br>
+          <a class="correo">saenzsportagency18@gmail.com</a><br>
+        </div>
+        </div>     
+      </article>
+    </section>
+  </div>
+</div>
+</div>
+
+{% endblock %}

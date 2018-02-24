@@ -1,0 +1,85 @@
+{% extends 'elite/base.html' %}
+{% block extra_head_tags %}
+
+  <title>Noticias | Grupo Elite Sport</title>
+
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<div class="container padding-cero">
+  <div class="container-fluid fondo">
+    <div class="container">
+      <h1 class="colaboradores animacion1"><strong>NOTICIAS</strong></h1>
+   </div>
+  </div>
+</div>
+<div class="container fondo-blanco">
+  <div id="texto-content-noticias">
+    <article class="col-sm-9">
+    {% for j in noticia %}
+      <div class="noticia ">
+        <header>
+          <h3><a href="{% url 'get_noticias_detail' pk=j.enlace %}">{{ j.titulo }}</a> </h3>
+          <h4>
+              {{ j.delegacion }}
+
+              <!-- {% for d in j.delegacion %}
+                {{d}}
+              {% endfor %} -->
+          </h4>
+          <!--<h4>#GrupoElite</h4>-->
+        </header>
+        <div class="fecha">
+          <div class="dia">{{ j.fecha|date:'d' }}</div>
+          <div class="mes">{{ j.fecha|date:'M' }}</div>
+          <div class="year">{{ j.fecha|date:'Y' }}</div>
+        </div>
+        <div class="texto">
+          <img src="{{ j.imagen_noticia.url }}" height="100" width="150" class="fl">
+          {{ j.contenido|truncatewords:40|safe }}
+          <div class="seguir">
+            <a href="{% url 'get_noticias_detail' pk=j.enlace %}">Seguir leyendo...</a>
+          </div>
+        </div>
+        
+      </div>
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if noticia.has_previous %}
+                <a href="?p=1">&laquo; Primera</a>
+                <a href="?p={{ noticia.previous_page_number }}">Anterior</a>
+            {% endif %}
+
+            <span class="current">
+                Página {{ noticia.number }} de {{ noticia.paginator.num_pages }}.
+            </span>
+
+            {% if noticia.has_next %}
+                <a href="?p={{ noticia.next_page_number }}">Siguiente</a>
+                <a href="?p={{ noticia.paginator.num_pages }}">Última &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
+    </article>
+
+    <div class="col-sm-3 text-center" >
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/1.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/2.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/3.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/4.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+    </div>
+  </div>  
+</div>
+
+{% endblock %}

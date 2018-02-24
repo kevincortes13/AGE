@@ -1,0 +1,59 @@
+{% extends 'elite/base.html' %}
+{% block extra_head_tags %}
+
+  <title>Áreas de influencia | Empresa | Grupo Elite Sport</title>
+
+  <meta itemprop="name" content="Áreas de influencia | Empresa | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Áreas de influencia | Empresa | GrupoElite Sport">
+
+  <meta property="og:title" content="Áreas de influencia | Empresa | GrupoElite Sport" />
+
+  <meta property="og:title" content="Áreas de influencia | Empresa | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container padding-cero">
+  <div class="container-fluid fondo">
+    <div class="container ">
+      <h1 class="colaboradores"><strong>ÁREAS DE INFLUENCIAS</strong></h1>
+
+   </div>
+  </div>
+</div>
+<section class="row">
+  <div class="container-fluid fondo-blanco sombra">
+    <div class="container">
+    <img src="{% static 'img/influencia/areas.png' %}" alt="Areas de influencias" class="img-responsive influencias-arreglar" >
+
+    <br>
+    <div class="influencia-pais">
+    <h2><strong>Venezuela</strong></h2>
+    </div>
+    <div class="col-sm-12 padding-30">
+    
+    
+    <div class="col-sm-4 influencia">
+      <div><h3>Maracaibo</h3></div>
+      <div><h3>Mérida</h3></div>
+      <div><h3>Barinas</h3></div>
+    </div>
+    <div class="col-sm-4 influencia">
+      <div><h3>Valencia</h3></div>
+      <div><h3>Maracay</h3></div>
+      <div><h3>Caracas</h3></div>
+    </div>
+    <div class="col-sm-4 influencia">
+      <div><h3>Yaracuy</h3></div>
+      <div><h3>Puerto Ordaz</h3></div>
+    </div>
+    </div>
+    </div>
+    <br>
+  </div>
+</section>
+
+{% endblock %}

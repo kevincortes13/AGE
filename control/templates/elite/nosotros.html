@@ -1,0 +1,177 @@
+{% extends 'elite/base.html' %}
+{% block extra_head_tags %}
+
+  <title>Nosotros | Empresa | GrupoElite Sport</title>
+
+  <meta itemprop="name" content="Nosotros | Empresa | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Nosotros | Empresa | GrupoElite Sport">
+
+  <meta property="og:title" content="Nosotros | Empresa | GrupoElite Sport" />
+
+  <meta property="og:title" content="Nosotros | Empresa | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container padding-cero">
+  <div class="container-fluid fondo padding-cero">
+    <div class="container">
+      <h1 class="colaboradores"><strong>EMPRESA</strong></h1>
+   </div>
+  </div>
+</div>
+<div class="container padding-cero fondo-blanco sombra">
+  <section>
+    <article>
+
+      <div class="col-sm-12 servicios">
+        <h2><strong>Sobre Nosotros</strong></h2>
+
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#home" style="color: #000;">Daniel Delfino</a></li>
+          <li><a data-toggle="tab" href="#menu1"  style="color: #000;"> + </a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <img src="{% static 'img/nosotros/daniel-delfino/daniel.png' %}" alt="Daniel Delfino - Representante/Coordinador Nacional e Internacional" class="img-responsive" style="width: 20%;height: 20%; float: left;padding: 5px; border-radius: 15%;">
+            <h2>Daniel Delfino - Presidente</h2>
+            <p>En <strong>Grupo Elite</strong> somos fieles creyentes del talento Venezolano y Sudamericano. Creemos que a traves de la Educación y el asesoramiento personal y deportivo, lograremos catapultar a nuestro jugadores hacia la elite del futbol nacional e internacional.</p>
+            <p>En nuestra agencia contamos con personal profesional y experimentado en el mundo del futbol, por lo que la <strong>superación</strong> y <strong>proyección</strong> de nuestros jugadores estan garantizados.</p>
+            <p>Nuestro <strong>Presidente Daniel Delfino</strong>, cuenta con un glorioso palmarez como jugador. Siendo el  <strong>Maximo goleador extranjero del futbol Venezolano</strong> con 70 tantos, <strong>8vo Goleador historico de Banfield (Argentina)</strong>  con 58 dianas y posee el <strong>record de más goles en un torneo Boliviano</strong>. En sus inicios futbolisticos figuras como Fernando Redondo figura estelar del real Madrid, Jorge "pipa" Iguain , Julio Cruz , El Kili Gonzales entrenadores como Ángel Capa , Carlos Babington y Ricardo Lavolpe  formarían parte de la vida deportiva de Daniel y a lo largo de la historia compartiria vestuario con granfes personalidades del futbol mundial.  Mucho de los goles  del <strong>"Chueco"</strong> como lo conocian dentro de las canchas llegaron por centros de <strong>Javier "Pupi" Zanetti</strong> figura e Idolo en el Internacional de Milan y vice presidente de dicha institución.</p>
+            <p><strong>Daniel Delfino</strong> llego a diversos destinos en el mundo gracias al futbol, clubes como The Strongesr (Bolivia), Banfield (Argentina), Rosario Central (Argentina), Deportivo Cuenca (Ecuador), Carabobo (Venezuela), Tachira (Venezuela) entre otros, sirvieron como casa de nuestro goleador, donde quedaron sembradas grandes amistades.</p>
+            <p>En <strong>Grupo Elite</strong> buscaremos replicar a mayor escala la carrera de nuestro goleador estrella, quien siempre bajo las banderas del respeto y la constancia logro alcanzar grandes clubes a nivel Sudamericano.</p>
+            <h3 style="text-align: center;">Galeria</h3>
+            <br>
+            <section>
+            <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/1.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel delfino y Leonel Liberman clásico The Strongest vs Bolívar.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/3.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino foto de presentación Banfield 1993.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/4.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino goleador histórico.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/5.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel "Chueco" Delfino.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/2.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Delfino, Comizzo y Javier "Pupi" Zanetty glorias de Banfield.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/18.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Criollo más.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/6.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Javier "Pupi" Zanetti y Daniel Delfino, Banfield 1993.</p>
+              </div>          
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/24.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>The strongest.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/9.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino época dorada de Banfield junto al "Pupi" Zanetti.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/10.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino máximo goleador en Bolivia con el Unión Central.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/11.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino con el Deportivo Táchira FC.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/12.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino clásico Táchira vs Caracas.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/13.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>La Figura.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/14.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel con el Diego Maradona.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/8.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino con el Carabobo FC.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/16.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Delfino, campeón con el Deportivo Italia.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/23.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino con el Deportivo Táchira FC.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/7.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino goleador histórico del Carabobo FC.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/19.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel delfino con el Granate.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/20.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino máximo goleador extranjero.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/22.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino idolo eterno.</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/21.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel "Chueco" Delfino recibiendo botín de oro. 2005 Goleador.</p>
+              </div>     
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/17.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)">
+                <p>Daniel Delfino</p>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+                <img src="{% static 'img/nosotros/daniel-delfino/15.jpeg' %}" class="th-2 img-responsive" onclick="onClick(this)" >
+                <p>Goleador.</p>
+              </div>
+
+            </div>
+            </section>
+
+          </div>
+          <div id="menu1" class="tab-pane fade">
+            <img src="{% static 'img/logo_navbar.png' %}" alt="" class="img-responsive" style="width: 20%;height: 20%; float: left;padding: 5px; border-radius: 15%;">
+            <h2>Grupo Elite</h2>
+            <p>Agencia de representación de futbolistas</p>
+          </div>
+        </div>
+
+        <br>
+
+        <br>
+      </div>
+  </article>
+  </section>
+</div>
+
+{% endblock %}

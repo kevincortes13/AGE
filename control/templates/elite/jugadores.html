@@ -1,0 +1,91 @@
+{% extends 'elite/base.html' %}
+
+{% block extra_head_tags %}
+
+  <title>Jugadores | GrupoElite Sport</title>
+
+  <meta itemprop="name" content="Jugadores | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Jugadores | GrupoElite Sport">
+
+  <meta property="og:title" content="Jugadores | GrupoElite Sport" />
+
+  <meta property="og:title" content="Jugadores | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="container-fluid fondo-blanco padiding-arriba-abajo"></div>
+
+  <div class="container-fluid fondo-blanco">
+    <div class="container ">
+    
+    <div class="col-xs-12 col-sm-9 col-md-9">
+      <h1 style="padding: 10px; font-size: 2em !important; text-align: center; color: #000033; border-color: #000033;" class="colaboradores animacion1"><strong>FUTBOLISTAS</strong></h1>
+      <h2 style="padding: 15px; font-size: 1.2em !important; text-align: center; color: #000033; border-color: #000033;" class="animacion1"><strong>¡Sé un jugador Elite!</strong></h2>
+    </div>
+
+    <div class="col-sm-2 visible-desktop hidden-xs" style="padding: 5px;">
+      <a href="{% url 'post_list_jugadores_busquedad' 'delanteros' %}" class="grises">
+        <img src="{% static 'img/cancha/DELANTERO.jpg' %}" class="img-responsive imgcenter">
+      </a>
+      <a href="{% url 'post_list_jugadores_busquedad'  'centrocampistas' %}" class="grises">
+      <img src="{% static 'img/cancha/CENTROCAMPISTA.jpg' %}" class="img-responsive imgcenter">
+      </a>
+      <a href="{% url 'post_list_jugadores_busquedad'  'defensas' %}" class="grises">
+      <img src="{% static 'img/cancha/DEFENSA.jpg' %}" class="img-responsive imgcenter">
+      </a>
+      <a href="{% url 'post_list_jugadores_busquedad'  'porteros' %}" class="grises">
+      <img src="{% static 'img/cancha/PORTEROS.jpg' %}" class="img-responsive imgcenter">
+      </a>
+    </div>
+
+   </div>
+  </div>
+  <br>
+
+  <div class="container-fluid fondo2 padiding-arriba-abajo"></div>
+  <div class="container-fluid fondo">
+    <div class="container ">
+      <h1 class="colaboradores"><strong>FUTBOLISTAS GRUPO ELITE</strong></h1>
+
+   </div>
+  </div>
+  <br>
+  <div class="container">
+  	{% for j in player %}
+	    <div class="col-md-4 col-sm-6 magin-cero padding-dies " id="futbolistas">
+	    <!-- <div class="container-fluid fondo2 padiding-arriba-abajo"></div> -->
+	    <div class="container-fluid fondo-blanco padiding-arriba-abajo sombra caja3">
+	      <div class="futbolistas">
+	        <img src="{{ j.imagen.url }}" alt="{{ j.nombre|capfirst }}" class="img-responsive">
+	      </div>
+	      <div class="info-futbolistas ">
+	        <div class="escudo">
+	          <img src="{{ j.club.logo_club.url }}" alt="{{ j.club.nombre_club }}">
+	        </div>
+	        <div class="equipo"><strong>{{ j.club.nombre_club }}</strong></div>
+	        <div class="division">{{ j.get_division_display }}</div>
+	        <div class="nacimiento"><strong>{{ j.fecha_nacimiento|date:'d-m-Y' }}</strong></div>
+	        <div class="nacionalidad">Nacionalidad</div>
+	        <div class="pais">{{ j.nacionalidad|capfirst }}</div>
+	      </div>
+	      <div class="container-fluid" >
+	        <div class="text-center nombre-futbolistas"> <h2><strong>{{ j.nombre|capfirst }} {{ j.apellido|capfirst }}</strong><br><h2 class="mayuscula" style="">{{ j.get_posicion_display }}</h2> </h2></div> 
+	      </div>
+	      <span class="info2">
+	        <div class="jugadores-ver-perfil" href="#">
+	          <a href="{{ j.link }}" target="_blank" class="ver-perfil mayuscula">Ver ficha completa de<br><strong> {{ j.nombre|capfirst }} {{ j.apellido|capfirst }}<br><span class="glyphicon glyphicon-chevron-down "></span></strong></a>
+	        </div>                       
+	      </span>
+	    </div>            
+	    </div>
+    {% endfor %}
+
+  </div>
+
+
+{% endblock %}

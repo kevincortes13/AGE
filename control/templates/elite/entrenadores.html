@@ -1,0 +1,75 @@
+{% extends 'elite/base.html' %}
+
+{% block extra_head_tags %}
+
+  <title>Entrenadores | GrupoElite Sport</title>
+
+  <meta itemprop="name" content="Entrenadores | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Entrenadores | GrupoElite Sport">
+
+  <meta property="og:title" content="Entrenadores | GrupoElite Sport" />
+
+  <meta property="og:title" content="Entrenadores | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="container-fluid fondo-blanco padiding-arriba-abajo"></div>
+
+  <div class="container-fluid fondo-blanco">
+    <div class="container ">
+    
+<!--     <div class="col-xs-12 col-sm-12 col-md-12">
+
+      <h2 style="padding: 5px; margin: 0px; font-size: 1.2em !important; text-align: center; color: #004877; border-color: #004877;" class="animacion1"><strong>ENTRENADORES<br>¡Los mejores están aquí!</strong></h2>
+    </div> -->
+
+   </div>
+  </div>
+  <br>
+
+  <div class="container-fluid fondo2 padiding-arriba-abajo"></div>
+  <div class="container-fluid fondo">
+    <div class="container ">
+      <h1 class="colaboradores"><strong>ENTRENADORES GRUPO ELITE</strong></h1>
+
+   </div>
+  </div>
+  <br>
+  <div class="container">
+  	{% for j in coach %}
+	    <div class="col-md-4 col-sm-6 magin-cero padding-dies " id="futbolistas">
+	    <!-- <div class="container-fluid fondo2 padiding-arriba-abajo"></div> -->
+	    <div class="container-fluid fondo-blanco padiding-arriba-abajo sombra caja3">
+	      <div class="futbolistas">
+	        <img src="{{ j.imagen.url }}" alt="{{ j.nombre|capfirst }}" class="img-responsive">
+	      </div>
+	      <div class="info-futbolistas ">
+	        <div class="escudo">
+	          <img src="{{ j.club.logo_club.url }}" alt="{{ j.club.nombre_club }}">
+	        </div>
+	        <div class="equipo"><strong>{{ j.club.nombre_club }}</strong></div>
+	        <div class="division">{{ j.get_division_display }}</div>
+	        <div class="nacimiento"><strong>{{ j.fecha_nacimiento|date:'d-m-Y' }}</strong></div>
+	        <div class="nacionalidad">Nacionalidad</div>
+	        <div class="pais">{{ j.nacionalidad|capfirst }}</div>
+	      </div>
+	      <div class="container-fluid" >
+	        <div class="text-center nombre-futbolistas"> <h2><strong>{{ j.nombre|capfirst }} {{ j.apellido|capfirst }}</strong><br><h2 class="mayuscula" style="">ENTRENADOR</h2></h2></div> 
+	      </div>
+	      <span class="info2">
+	        <div class="jugadores-ver-perfil" href="#">
+	          <a href class="ver-perfil mayuscula">Ver ficha completa de<br><strong> {{ j.nombre|capfirst }} {{ j.apellido|capfirst }}<br><span class="glyphicon glyphicon-chevron-down "></span></strong></a>
+	        </div>                       
+	      </span>
+	    </div>            
+	    </div>
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

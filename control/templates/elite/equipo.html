@@ -1,0 +1,55 @@
+{% extends 'elite/base.html' %}
+{% block extra_head_tags %}
+
+  <title>Equipo | Empresa | Grupo Elite Sport</title>
+
+  <meta itemprop="name" content="Equipo | Empresa | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Equipo | Empresa | GrupoElite Sport">
+
+  <meta property="og:title" content="Equipo | Empresa | GrupoElite Sport" />
+
+  <meta property="og:title" content="Equipo | Empresa | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container padding-cero">
+  <div class="container-fluid fondo padding-cero">
+    <div class="container"> 
+      <h1 class="colaboradores"><strong>EMPRESA</strong></h1>
+   </div>
+  </div>
+</div>
+<div class="container padding-cero fondo-blanco sombra padding-abajo-equipo" id="equipo">
+  <h2 class="team"><strong>MI EQUIPO</strong></h2>
+  <section>
+    <article>
+      <div class="col-sm-12 equipo">
+        <header>
+          <div class="col-sm-12">
+
+            <h2><strong>Grupo Elite - Internacional</strong></h2>
+            
+          </div>
+        </header>
+      </div>
+      <div class="col-sm-12 equipo">
+        <div class="col-sm-2 delegaciones">
+          <img src="{% static 'img/delegaciones/4.png' %}" class="th-4 img-responsive imgcenter">
+        </div>
+        <div class="col-sm-3 delegaciones borde-dere-izq">
+          <div class="scouting">
+            <img src="{% static 'img/scouting/daniel.png' %}" class=" sombra img-responsive imgcenter">           
+          </div>
+          <div class="nombre"><h3>Daniel Delfino</h3></div>
+          <div class="cargo"><h3>Representante/Coordinador<br>Nacional y Internacional</h3></div>
+        </div>
+      </div>
+  </article>
+  </section>
+</div>
+
+{% endblock %}

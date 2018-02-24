@@ -1,0 +1,130 @@
+{% extends 'elite/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="thumbnail container sombra animacion1">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      
+      <div class="carousel-inner" role="listbox">
+        
+        <div class="item active">
+          <a href="{% url 'post_index' %}"><img src="{% static 'img/carrusel/jugadores_grupo_elite.jpg' %}" alt="Jugadores Grupo Elite Sport" class="img-responsive" ></a> 
+        </div>
+
+        <div class="item ">
+          <a href="{% url 'post_index' %}"><img src="{% static 'img/carrusel/daniel_delfino.png' %}" alt="GrupoEliteSport" class="img-responsive" ></a> 
+        </div>
+
+        <div class="item ">
+          <a href="{% url 'post_index' %}"><img src="{% static 'img/carrusel/logo1.png' %}" alt="GrupoEliteSport" class="img-responsive" ></a> 
+        </div>
+
+      </div>
+
+      
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> 
+  </div>
+</div>
+
+
+<br>
+<div class="container padding-cero sombra animacion1" style="background: #fff;border-radius: 1%; ">
+  
+  <div class="col-sm-8" style="padding: 0px; padding-bottom: 20px">
+    <div class="container-fluid" >
+      <h1 class="index-not"><strong>ACTUALIDAD DE NUESTROS JUGADORES</strong></h1>
+    </div>
+      <table>
+        <tbody>
+          <tr >
+          {% for j in noticia %}
+            <th class="{% cycle 'padding-top-bottom' 'padding-top-bottom visible-desktop hidden-xs' %}">
+              <a href="{% url 'get_noticias_detail' pk=j.enlace %}">
+              <div class="index-noticia"> 
+              <h2><strong>
+              {% for f in j.futbolistas.all %}
+              {{ f.nombre }} {{ f.apellido }}
+              {% endfor %} 
+              </h2>
+              </div>
+              <img src="{{ j.imagen_noticia.url }}" alt="{{ j.titulo }}" class="img-responsive noticias-arreglar" >
+              <div class="container text-center index-noticia"> <a href="{% url 'get_noticias_detail' pk=j.enlace %}"><strong>{{ j.titulo }}. {{ j.fecha|date:'d/m/Y' }}</a ></div>
+              </a>
+              
+            </th>
+          {% endfor %} 
+            
+          </tr>
+        </tbody>
+      </table>
+
+
+    
+  </div>
+  <div class="col-sm-4 visible-desktop hidden-xs">
+    <div class="container-fluid">
+      <div class="container">
+        <h1 class="index-not text-center"><strong>Twitter Oficial</strong></h1>
+      </div>
+    </div>
+    <a class="twitter-timeline" data-width="400" data-height="300" data-dnt="true" data-theme="light" href="https://twitter.com/FVF_Oficial?ref_src=twsrc%5Etfw">Tweets by FVF_Oficial</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  
+  
+</div>
+<br>
+  <div class="fondo-carrousel sombra " id="Clientes">
+    <br>
+    <section class="animacion2">
+    
+    <div class="container">
+    <h1 class=" align-center">JUGADORES GRUPO ELITE SPORT</h1>
+
+
+    <div class="miCarrusel" id="carruselEfect">
+     <div id="carusel1" class="owl-carousel owl-theme">
+          {% for j in player %}
+            <article class="item">
+              <div class="testimonio">
+                <div class="back-jugadores caja2">
+                          <a href="{{ j.link }}"><img src="{{ j.imagen.url }}" alt="{{ j.nombre|capfirst }} {{ j.apellido|capfirst }}" class="img-responsive jugadores-arreglo"></a>
+                          <h3 class="padding-jugadores" ><strong>{{ j.nombre|capfirst }} {{ j.apellido|capfirst }}</strong></h3>
+                          <span class="info2">
+                          <div class="letra-blanca" href="#">
+                            <h3 class="carrousel-nombre"><strong>{{ j.nombre|capfirst }} {{ j.apellido|capfirst }}</strong></h3>
+                            <h3 class="jugador-letra carousel-fecha">{{ j.fecha_nacimiento|date:'d-m-Y' }}</h3>
+                            <img src="{{ j.club.logo_club.url }}" class="img-responsive imagen-carrousel imgcenter">
+                            <h3 class="carousel-equipo"> <strong>{{ j.club.nombre_club }}</strong></h3> 
+                            <a href="{{ j.link }}" target="_blank" class="ver-perfil"><strong>Ver perfil.</strong></a>
+                          </div>
+                          
+                          </span>
+                          <!--<span class="disco"></span>-->
+                        </div>
+              </div>
+            </article>
+          {% endfor %}
+          </div>
+          <br>
+          <p  style="color: #fff; font-size: 1em;" class="animacion2">!Sé un jugador Elite!</p>
+  </div>
+
+  </div>
+  </section>
+  </div>
+<br> <br><br>
+<div class="container padding-cero sombra animacion3">
+  
+  <a href="areas-de-influencia.html">
+    <img src="{% static 'img/influencia/areas.png' %}" alt="Areas de influencias" class="img-responsive influencias-arreglar"  >
+  </a>
+</div>
+<br>
+{% endblock %}

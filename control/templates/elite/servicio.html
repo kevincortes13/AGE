@@ -1,0 +1,55 @@
+{% extends 'elite/base.html' %}
+{% block extra_head_tags %}
+
+  <title>Servicios | Empresa | GrupoElite Sport</title>
+
+  <meta itemprop="name" content="Servicios | Empresa | GrupoElite Sport">
+
+  <meta name="twitter:title" content="Servicios | Empresa | GrupoElite Sport">
+
+  <meta property="og:title" content="Servicios | Empresa | GrupoElite Sport" />
+
+  <meta property="og:title" content="Servicios | Empresa | GrupoElite Sport" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container padding-cero">
+  <div class="container-fluid fondo padding-cero">
+    <div class="container">
+      <h1 class="colaboradores"><strong>EMPRESA</strong></h1>
+   </div>
+  </div>
+</div>
+<div class="container padding-cero fondo-blanco sombra">
+  <section>
+    <article>
+
+      <div class="col-sm-12 servicios">
+        <h2><strong>SERVICIOS</strong></h2>
+        <p>El mundo del fútbol cada día es más complejo y en <strong>Grupo Elite</strong> trabajamos para dar respuesta a todas las necesidades del deportista. Somos pioneros en la gestión de <strong>servicios integrales.</strong></p>
+        <p>Además del trabajo de representación que lleva a cabo el extenso equipo de agentes (<a href="{% url 'equipo_tecnico' %}">Ver Equipo</a>), hay muchas otras facetas que preocupan al futbolista en su día a día.</p>
+        <p><strong>Grupo Elite</strong>  es  una agencia  formada por profesionales del mundo del fútbol, teniendo como objetivo principal captación del futbolista para desarrollar su carrera, hasta convertirlo en un jugador de elite,  ya que no solo se ocupara de buscar un equipo para renovar un contrato al futbolista, sino que a su vez la VIDA y la COMODIDAD del deportista estén garantizadas, brindándoles una atención permanente, dedicada y exclusiva lo cual permitirá que nuestros afiliados logren sus objetivos profesionales con la tranquilidad que su carrera está en buenas manos, guiándole en distintos campos como pueden ser fiscal, jurídico, márketing, publicidad.</p>
+        <br>
+        <h3>Servicios:</h3>
+        <ul>
+          <li>Reprentación</li>
+          <li>Asesoría Deportiva</li>
+          <li>Asesoría Jurídica</li>
+          <li>Asesoría Laboral</li>
+          <li>Asesoría Fiscal</li>
+          <li>Administración</li>
+          <li>Asesoría Medica</li>
+          <li>Cobertura de servicios integrales</li>
+          <li>Comunicación</li>
+          <li>Imagen</li>
+        </ul>
+        <br>
+      </div>
+  </article>
+  </section>
+</div>
+
+{% endblock %}

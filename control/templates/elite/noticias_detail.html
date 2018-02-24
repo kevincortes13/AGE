@@ -1,0 +1,115 @@
+{% extends 'elite/base.html' %}
+  {% block extra_head_tags %}
+
+  <title>{{ noticia.titulo }} | GrupoElite Sport</title>
+  <meta name="description" content="{{ noticia.contenido|truncatewords:20|safe }}">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="{{ noticia.titulo }} | GrupoElite Sport">
+  <meta itemprop="description" content="{{ noticia.contenido|truncatewords:10|safe }}">
+  <meta itemprop="image" content="{{ noticia.imagen_noticia.url }}">
+
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AgencySaenz">
+  <meta name="twitter:title" content="{{ noticia.titulo }} | GrupoElite Sport">
+  <meta name="twitter:description" content="{{ noticia.contenido|truncatewords:10|safe }}">
+  <meta name="twitter:creator" content="@AgencySaenz">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{ noticia.titulo }} | GrupoElite Sport" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ request.build_absolute_url }}" />
+  <meta property="og:image" content="{{ noticia.imagen_noticia.url }}" />
+  <meta property="og:description" content="{{ noticia.contenido|truncatewords:10|safe }}" />
+  <meta content="http://grupoelitesport.com.ve/" property="og:site_name">
+  <meta content="es_ES" property="og:locale">
+  <meta name="author" content="Kevin Cortes">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<div class="container padding-cero">
+  <div class="container-fluid fondo">
+    <div class="container">
+      <h1 class="colaboradores animacion1"><strong>NOTICIAS</strong></h1>
+   </div>
+  </div>
+</div>
+<div class="container fondo-blanco">
+  <div id="texto-content-noticias">
+    <article class="col-sm-9">
+      <div class="noticia ">
+        <header>
+          <h3>{{ noticia.titulo }}</h3>
+          <h4>
+              {{ noticia.delegacion }}
+          </h4>
+          <!--<h4>#GrupoElite</h4>-->
+        </header>
+        <div class="fecha">
+          <div class="dia">{{ noticia.fecha|date:'d' }}</div>
+          <div class="mes">{{ noticia.fecha|date:'M' }}</div>
+          <div class="year">{{ noticia.fecha|date:'Y' }}</div>
+        </div>
+        <div class="texto">
+          <img src="{{ noticia.imagen_noticia.url }}" class="imgcenter img-responsive">
+          <br>
+          {{ noticia.contenido|safe }}
+
+          <div class="col-md-12 share">
+                    <ul class="social-network social-circle">
+                        <li>
+                          <a href="http://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title={{ sharen_titulo }}." target="_blank" class="icoReddit" title="Reddit">
+                            <i class="fa fa-reddit"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="icoFacebook" title="Facebook">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/home?status={{ sharen_string }}%20{{ request.build_absolute_uri }}" target="_blank" class="icoTwitter" title="Twitter">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}' target="_blank" class="icoGoogle" title="Google +">
+                            <i class="fa fa-google-plus"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ sharen_titulo }}&summary={{ sharen_string }}&source={{ request.build_absolute_uri }}" target="_blank" class="icoLinkedin" title="Linkedin">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                        </li>
+                    </ul>       
+          </div>
+
+          <div class="seguir">
+            <a href="{% url 'get_noticias' %}">Ir a noticias</a>
+          </div>
+        </div>
+        
+      </div>
+    </article>
+
+    <div class="col-sm-3 text-center" >
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/1.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/2.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/3.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+      <a href="{% url 'contacto' %}" id="texto-content-noticias">
+        <img src="{% static 'img/delegaciones/4.png' %}" class="th-1 img-responsive imgcenter">
+      </a>
+    </div>
+  </div>  
+</div>
+
+{% endblock %}
