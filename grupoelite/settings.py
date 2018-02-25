@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'multiselectfield',
     'tinymce',
     'urllib.parse',
-    'jsmin',
 )
 
 MIDDLEWARE_CLASSES = (
