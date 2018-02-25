@@ -3,7 +3,7 @@ from django.utils import timezone
 from multiselectfield import MultiSelectField
 from autoslug import AutoSlugField
 from django.template.defaultfilters import slugify
-from tinymce import HTMLField
+from tinymce.models import HTMLField
 
 
 class Club(models.Model):
