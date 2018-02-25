@@ -72,3 +72,14 @@ Both `django-filebrowser`_ and `django-filebrowser-no-grappelli`_ are supported.
 .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
 .. _django-filebrowser-no-grappelli: https://github.com/smacker/django-filebrowser-no-grappelli
 """
+## somewhere in settings.py
+JSMIN_ROOT = '/path/to/my/project/'
+
+# JSMIN_INPUT contains a list of all the input files and URLs.
+JSMIN_INPUT = [
+    'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js',
+    'media/js/jquery.*.js', # jQuery plugins
+    'media/js/*.src.js', # project-specific libraries
+]
+
+JSMIN_OUTPUT = 'media/js/project.min.js'
