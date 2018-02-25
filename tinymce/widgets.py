@@ -26,7 +26,7 @@ try:
 except ImportError:
     from django.core.urlresolvers import reverse
 from django.contrib.admin import widgets as admin_widgets
-from jsmin import jsmin
+from jsmin import jsmin as libjsmin
 from . import settings as mce_settings
 
 __all__ = ['TinyMCE', 'render_tinymce_init_js']
